@@ -1,0 +1,56 @@
+Objects = The entities of real world
+Class = The blueprint of Objects
+
+Syntax of Class
+class classname {
+    properties/attributes such as name,age etc
+    methods(functions which are written inside a class)/functions/member functions(called so cause they are members of a class)
+};
+
+
+Constructor = Special method invoked automatically(automatically called by c++ whenever we create a new obj) at time of obj creation.Used for initialization
+
+Class is just a bp it does not occupy space in memory but the objects created by the bp occupies space in memory 
+
+Properties of Constructor
+same name as class
+Constructor does not have a return type
+only called once(automatically),at obj creation
+memory allocation happens when Constructor is called i.e when a obj is created
+
+Constructor is declared as public as it need to get access of member functions
+
+Constructor is of 3 types:
+Non-parameterized(no parameters inside constructor)
+parameterized
+copy
+
+There can be more than one constructor inside a class if they have totally different parameters 
+
+The phenomenon in which we can have multiple constructors which may have same name but are of different type is called constructor overloading and constructor overloading is an example of polymorphism
+
+this pointer
+this is a special pointer in C++ that points to current obj
+this->prop is same as *(this).prop  
+let obj is calling a function but the function wants to refer the properties of this obj so either this function can access this properties by writing property or we can write this->property   
+obj.func()
+
+int x=10
+int*ptr=&x;
+*ptr here
+ * is dereferencing operator means dereferencing pointer i.e the value that pointer points to x having value 10 then *ptr means we are talking ab 10
+
+*this means obj
+to access property we can write 
+(*this).prop means obj.prop 
+
+Copy constructor = Special constructor(default) used to copy properties of one obj to another 
+
+Copy is of 2 types 
+Shallow copy of an obj copies all of the member values from one obj to another but the issue is when we create a new memory allocation inside heap or using pointers
+Deep copy not only copies the member values but also makes copies of any dynamically allocated memory that members point to
+
+Destructor = Opposite of constructor i.e deallocate the memory(deleting the computer system's memory).It is a special function & compiler makes self-Destructor we don't make it
+
+In c++ any obj created dynamically we have to delete it dynamically as we create by using new keyword so we have to delete it by using delete keyword
+Ex deletePtr meaning delete the memory that the pointer is pointing to but pointer doesn't get deleted 
